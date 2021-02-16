@@ -1,0 +1,328 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Oxygen", sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+@media (max-width: 767px) {
+  .container {
+    width: 95%;
+  }
+}
+
+h2 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 15px 100px;
+  background-color: rgba(54, 124, 132, 0.6);
+  backdrop-filter: blur(4px);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+@media (max-width: 768px) {
+  header nav {
+    justify-content: center;
+    padding: 15px 5px;
+  }
+}
+header nav .logo {
+  color: #ca961e;
+  font-weight: 700;
+  font-size: 24px;
+}
+header nav .logo:hover {
+  color: white;
+  text-shadow: 1px 1px 1.5px #275a60;
+  cursor: pointer;
+}
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  header nav ul {
+    justify-content: center;
+  }
+}
+header nav ul li a {
+  color: white;
+  padding: 8px 15px;
+}
+@media (max-width: 768px) {
+  header nav ul li a {
+    padding: 4px;
+  }
+}
+header nav ul li a:hover {
+  color: #ca961e;
+  transition: 0.3 ease;
+  text-shadow: 1px 1px 1.5px white;
+  font-weight: 700;
+  cursor: pointer;
+}
+header .main-banner {
+  background-image: linear-gradient(to right, rgba(54, 124, 132, 0.6), rgba(54, 124, 132, 0.6)), url("../img/banner-1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 90vh;
+}
+@media (max-width: 767px) {
+  header .main-banner {
+    background-position: top left;
+  }
+}
+header .main-banner article {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  padding: 150px 0;
+}
+header .main-banner article h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+@media (max-width: 767px) {
+  header .main-banner article h1 {
+    text-align: center;
+  }
+}
+header .main-banner article p {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+header .main-banner article a {
+  color: #367c84;
+  background: #ca961e;
+  font-weight: 700;
+  padding: 8px 12px;
+}
+header .main-banner article a:hover {
+  color: #ca961e;
+  background: #367c84;
+  border: 1px solid #ca961e;
+}
+
+main .services {
+  padding: 100px 0;
+}
+main .services article h2 {
+  color: #ca961e;
+}
+main .services article .icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+main .services article .icons span {
+  margin-right: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+main .services article .icons span i {
+  font-size: 48px;
+  color: #367c84;
+  padding: 40px 50px;
+  border-radius: 50%;
+  border: 2px solid #ca961e;
+  text-align: center;
+}
+main .services article .icons span .square {
+  padding: 40px;
+}
+main .services article .icons span a {
+  color: #367c84;
+  padding: 8px 15px;
+  font-weight: 700;
+}
+main .services article .icons span a:hover {
+  color: #ca961e;
+  cursor: pointer;
+}
+main .lessons-banner {
+  padding: 100px 0;
+  background-image: linear-gradient(to right, rgba(54, 124, 132, 0.4), rgba(54, 124, 132, 0.4)), url("../img/banner-2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+}
+@media (max-width: 767px) {
+  main .lessons-banner {
+    padding-top: 50px;
+  }
+}
+main .lessons-banner .container h2 {
+  color: white;
+  position: relative;
+}
+@media (max-width: 767px) {
+  main .lessons-banner .container h2 {
+    margin-bottom: 30px;
+  }
+}
+main .lessons-banner .container h2 span {
+  font-size: 1.4rem;
+  position: absolute;
+  bottom: -1.5px;
+  color: #ca961e;
+}
+@media (max-width: 767px) {
+  main .lessons-banner .container h2 span {
+    bottom: -20px;
+  }
+}
+main .lessons-banner .container .wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+main .lessons-banner .container .wrapper div {
+  flex: 0 0 32%;
+}
+@media (max-width: 767px) {
+  main .lessons-banner .container .wrapper div {
+    flex: 0 0 100%;
+  }
+}
+main .lessons-banner .container .wrapper div h3 {
+  text-align: center;
+  color: #ca961e;
+  margin-bottom: 15px;
+}
+@media (max-width: 767px) {
+  main .lessons-banner .container .wrapper div h3 {
+    margin-bottom: 5px;
+  }
+}
+main .lessons-banner .container .wrapper div p {
+  text-align: justify;
+  color: white;
+}
+main .projects {
+  padding: 100px 0;
+}
+main .projects h2 {
+  color: #ca961e;
+}
+main .projects .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+main .projects .container a {
+  flex: 0 0 33%;
+}
+main .projects .container a img {
+  width: 100%;
+  opacity: 0.7;
+}
+main .projects .container a img:hover {
+  opacity: 1;
+  transform: scale(1.05, 1.05);
+}
+
+footer {
+  background-color: #367c84;
+  padding: 50px 0;
+}
+footer h2 {
+  color: white;
+  margin-bottom: 50px;
+}
+footer .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+footer .container ul {
+  flex: 0 0 35%;
+}
+@media (max-width: 767px) {
+  footer .container ul {
+    flex: 0 0 100%;
+  }
+}
+footer .container ul li {
+  color: white;
+  margin-bottom: 10px;
+  text-align: left;
+  border-bottom: 1px solid rgba(202, 150, 30, 0.4);
+}
+@media (max-width: 767px) {
+  footer .container ul li {
+    text-align: center;
+  }
+}
+footer .container ul .social-media a {
+  margin-right: 10px;
+  color: #ca961e;
+}
+footer .container ul .social-media a i {
+  font-size: 24px;
+}
+footer .container ul .social-media a i:hover {
+  cursor: pointer;
+  transform: scale(1.5, 1.5);
+}
+footer .container iframe {
+  flex: 0 0 55%;
+}
+@media (max-width: 767px) {
+  footer .container iframe {
+    flex: 0 0 100%;
+    margin-top: 10px;
+  }
+}
+
+.bottom-bar {
+  background-color: #ab7f19;
+  padding: 15px 0;
+  text-align: center;
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */

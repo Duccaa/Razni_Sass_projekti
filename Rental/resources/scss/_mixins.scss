@@ -1,0 +1,39 @@
+@use 'variables';
+
+@mixin flex($justify, $align, $wrap) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-wrap: $wrap;
+}
+
+
+@mixin bgImg($img, $height) {
+    background-image: $img;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;   
+    height: $height;
+}
+
+@mixin btn {
+    background: variables.$accents;
+    padding: 15px 30px;
+    border: none;
+    font-size: 1rem;
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    &:hover {
+        background: variables.$primary;
+        cursor: pointer;
+        transition: variables.$transition;
+        color: variables.$white;
+    }
+}
+
+@mixin mQ($width) {
+    @media(max-width: $width) {
+        @content;
+    }
+} 

@@ -1,0 +1,295 @@
+/* Google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;800&display=swap");
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* basic style */
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+
+a:hover {
+  transition: 0.3s ease;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+}
+
+/* topBar */
+.topBar {
+  background: #2c3e50;
+  padding: 5px 0;
+}
+.topBar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  .topBar .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+.topBar .container .logo {
+  font-style: 2rem;
+  color: #f1c40f;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.topBar .container .logo:hover {
+  color: #fff;
+}
+.topBar .container .icons a {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-left: 20px;
+}
+.topBar .container .icons a:hover {
+  color: #f1c40f;
+}
+
+/* nav */
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+nav ul li {
+  margin: 10px;
+}
+@media (max-width: 768px) {
+  nav ul li {
+    margin: 5px;
+  }
+}
+nav ul li a {
+  color: #4a9375;
+  font-size: 1.2rem;
+}
+@media (max-width: 768px) {
+  nav ul li a {
+    font-size: 1rem;
+  }
+}
+nav ul li a:hover {
+  color: #27ae60;
+}
+
+/* header */
+header {
+  background-image: url(../img/header.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+header .box {
+  background: rgba(39, 174, 96, 0.7);
+  padding: 40px;
+  border: 1px solid #e9ecef;
+  text-align: center;
+  color: #fff;
+}
+@media (max-width: 768px) {
+  header .box {
+    margin: 20px;
+    padding: 20px;
+  }
+}
+header h1 {
+  font-size: 3rem;
+  text-shadow: 0 0 2px #2c3e50;
+}
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+}
+header h2 {
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+header button {
+  background: #f1c40f;
+  padding: 15px 30px;
+  border: none;
+  font-size: 1rem;
+  margin-top: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+header button:hover {
+  background: #2c3e50;
+  cursor: pointer;
+  transition: 0.3s ease;
+  color: #fff;
+}
+
+/*o nama*/
+.onama {
+  background-image: linear-gradient(rgba(74, 147, 117, 0.7), rgba(39, 174, 96, 0.7)), url(../img/onama.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 60vh;
+  background-position: bottom;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  color: #fff;
+}
+.onama h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-shadow: 0 0 2px #2c3e50;
+}
+.onama p {
+  text-shadow: 0 0 2px #2c3e50;
+}
+
+/* izdvojeno */
+.izdvojeno {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.izdvojeno article {
+  flex: 1;
+  background: #f1c40f;
+}
+@media (max-width: 768px) {
+  .izdvojeno article {
+    flex: 0 0 50%;
+  }
+}
+.izdvojeno article img {
+  width: 100%;
+}
+.izdvojeno article div {
+  padding: 15px 20px;
+  color: #fff;
+  text-align: center;
+}
+.izdvojeno article:nth-child(odd) div {
+  background: #2c3e50;
+}
+.izdvojeno article:nth-child(even) div {
+  background: #27ae60;
+}
+
+/* benefiti */
+.benefiti {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.benefiti article {
+  flex: 0 0 50%;
+}
+@media (max-width: 768px) {
+  .benefiti article {
+    flex: 0 0 100%;
+    padding: 20px;
+  }
+}
+.benefiti article:nth-child(1),
+.benefiti article:nth-child(4) {
+  padding: 50px;
+}
+.benefiti article:nth-child(1) h3,
+.benefiti article:nth-child(4) h3 {
+  font-size: 1.7rem;
+  margin-bottom: 10px;
+}
+.benefiti article:nth-child(2) {
+  background-image: url(../img/benefiti1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50vh;
+}
+@media (max-width: 768px) {
+  .benefiti article:nth-child(2) {
+    order: -1;
+  }
+}
+.benefiti article:nth-child(3) {
+  background-image: url(../img/benefiti2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50vh;
+}
+
+/* footer */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-image: linear-gradient(rgba(241, 196, 15, 0.9), rgba(241, 196, 15, 0.9)), url(../img/footer.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 60vh;
+  text-align: center;
+}
+footer h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+footer p {
+  margin-bottom: 20px;
+}
+footer input {
+  padding: 15px;
+}
+footer input[type=submit] {
+  background: #f1c40f;
+  padding: 15px 30px;
+  border: none;
+  font-size: 1rem;
+  margin-top: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: #2c3e50;
+  color: #fff;
+}
+footer input[type=submit]:hover {
+  background: #2c3e50;
+  cursor: pointer;
+  transition: 0.3s ease;
+  color: #fff;
+}
+footer input[type=submit]:hover {
+  background: #27ae60;
+}
+
+/*# sourceMappingURL=style.css.map */

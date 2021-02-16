@@ -1,0 +1,222 @@
+@use 'mixins';
+@use 'variables';
+
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;800&display=swap');
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* basic style */
+body {
+    font-family: variables.$fontFamily;
+    font-size: variables.$fontSize;
+}
+a:hover {
+    transition: variables.$transition;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    @include mixins.mQ(768px) {
+        width: 95%;
+    }
+}
+
+/* topBar */
+.topBar {
+    background: variables.$primary;
+    padding: 5px 0; 
+    .container {
+        @include mixins.flex(space-between, center, wrap);
+        @include mixins.mQ(768px) {
+            @include mixins.flex(center, center, wrap);
+        }
+        .logo {
+            font-style: 2rem;
+            color: variables.$accents;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            &:hover {
+                color: variables.$white;
+            }
+        }
+        .icons {
+            a {
+                color: variables.$white;
+                font-size: 1.5rem;
+                margin-left: 20px;
+                &:hover {
+                    color: variables.$accents;
+                }
+
+            }
+
+        }
+    }
+}  
+
+/* nav */
+nav {
+    ul {
+        @include mixins.flex(center, center, wrap);
+        li {
+            margin: 10px;
+            @include mixins.mQ(768px) {
+                margin: 5px;
+            }
+            a {
+                color: variables.$tertiary;
+                font-size: 1.2rem;
+                @include mixins.mQ(768px) {
+                    font-size: 1rem;
+                }
+                &:hover {
+                    color:variables.$secondary;
+                }
+            }
+        }
+    } 
+}
+
+/* header */
+header {
+    @include mixins.bgImg(url(../img/header.jpg), 85vh);
+    @include mixins.flex(center, center, wrap);
+    .box {
+        background: rgba(variables.$secondary, .7);
+        padding: 40px;
+        border: 1px solid variables.$gray;
+        text-align: center;
+        color: variables.$white;
+        @include mixins.mQ(768px) {
+            margin: 20px;
+            padding: 20px;
+        }
+    }
+    h1 {
+        font-size: 3rem;
+        text-shadow: variables.$textShadow;
+        @include mixins.mQ(768px) {
+            font-size: 2rem;
+        }
+    }
+    h2 {
+        font-weight: 300;
+        font-size: 1.5rem;
+    }
+    button {
+        @include mixins.btn;
+    }
+}
+
+/*o nama*/
+.onama {
+    @include mixins.bgImg((linear-gradient(rgba(variables.$tertiary, .7), rgba(variables.$secondary, .7)), url(../img/onama.jpg)), 60vh);
+    background-position: bottom;
+    @include mixins.flex(center, center, wrap);
+    text-align: center;
+    color: variables.$white;
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        text-shadow: variables.$textShadow;
+    }
+    p {
+        text-shadow: variables.$textShadow;
+    }
+}
+
+/* izdvojeno */ 
+.izdvojeno {
+    @include mixins.flex(center, center, wrap);
+    article {
+        flex: 1;
+        background: variables.$accents;
+        @include mixins.mQ(768px) {
+            flex: 0 0 50%;
+        }
+        img {
+            width: 100%;
+            // display: block;
+        }        
+        div {
+            padding: 15px 20px;
+            color: variables.$white;
+            text-align: center;
+        }
+    }
+    article:nth-child(odd) {
+        div{
+            background: variables.$primary;
+        }
+    }
+    article:nth-child(even) {
+        div {
+            background: variables.$secondary;
+        }
+    }
+     
+}
+
+/* benefiti */
+.benefiti {
+    @include mixins.flex(center, center, wrap);
+    article {
+        flex: 0 0 50%;
+        @include mixins.mQ(768px) {
+            flex: 0 0 100%;
+            padding: 20px;
+        }
+    }
+    article:nth-child(1),
+    article:nth-child(4) {
+        padding: 50px;
+        h3 {
+            font-size: 1.7rem;
+            margin-bottom: 10px; 
+        }
+    }
+    article:nth-child(2) {
+        @include mixins.bgImg(url(../img/benefiti1.jpg), 50vh);
+        @include mixins.mQ(768px) {
+            order: -1; 
+        }
+    }
+    article:nth-child(3) {
+        @include mixins.bgImg(url(../img/benefiti2.jpg), 50vh);
+    }
+}
+
+/* footer */
+footer {
+    @include mixins.flex(center, center, wrap);
+    @include mixins.bgImg((linear-gradient(rgba(variables.$accents, .9), rgba(variables.$accents, .9)), url(../img/footer.jpg)), 60vh);
+    text-align: center;
+    h3 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    p {
+        margin-bottom: 20px;
+    }
+    input {
+        padding: 15px;
+    }
+    input[type="submit"] {
+        @include mixins.btn;
+        // position: relative;
+        // top: 0.8px;
+        background: variables.$primary;
+        color: variables.$white;
+        &:hover {
+            background: variables.$secondary;
+        }
+    }
+}
