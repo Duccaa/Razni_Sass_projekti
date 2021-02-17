@@ -11,7 +11,7 @@ npm install -g sass
 For  more installation options: https://sass-lang.com/install
 
 
-Then you have to compile scss folder with css by running
+Then you have to compile sass with css by running
 
 sass --watch scss:css
 
