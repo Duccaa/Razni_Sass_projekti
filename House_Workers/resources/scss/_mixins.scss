@@ -1,0 +1,35 @@
+@use 'var';
+
+@mixin flex($justify, $align, $direction, $wrap) {
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    justify-content: $justify;
+    align-items: $align;   
+}
+
+@mixin btn ($bg, $border, $color, $transform, $bgh, $borderh, $colorh) {
+    padding: 15px 30px;
+    font-size: 1rem;
+    border-radius: 3px;
+    background: $bg;
+    border: $border;
+    color: $color;
+    text-transform: $transform;
+    font-weight: 700;
+    &:hover {
+        cursor: pointer;
+        background: $bgh;
+        border: $borderh;
+        color: $colorh;
+        transition: var.$transition;
+    }
+}
+
+@mixin bgImg($gradient, $url, $height) {
+    background-image: $gradient, $url;
+    height: $height;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
