@@ -30,6 +30,10 @@ h2 {
   margin-bottom: 80px;
 }
 
+.block {
+  display: block;
+}
+
 header nav {
   display: flex;
   flex-direction: row;
@@ -46,8 +50,7 @@ header nav {
 }
 @media (max-width: 768px) {
   header nav {
-    justify-content: center;
-    padding: 15px 5px;
+    padding: 15px 15px;
   }
 }
 header nav .logo {
@@ -60,6 +63,21 @@ header nav .logo:hover {
   text-shadow: 1px 1px 1.5px #275a60;
   cursor: pointer;
 }
+header nav #button {
+  background: transparent;
+  border: none;
+  outline: none;
+  display: none;
+}
+header nav #button .fa-bars {
+  color: #ca961e;
+  font-size: 30px;
+}
+@media (max-width: 768px) {
+  header nav #button {
+    display: inline-block;
+  }
+}
 header nav ul {
   display: flex;
   flex-direction: row;
@@ -69,7 +87,10 @@ header nav ul {
 }
 @media (max-width: 768px) {
   header nav ul {
-    justify-content: center;
+    width: 100%;
+    text-align: end;
+    padding-top: 5px;
+    display: none;
   }
 }
 header nav ul li a {
@@ -79,6 +100,7 @@ header nav ul li a {
 @media (max-width: 768px) {
   header nav ul li a {
     padding: 4px;
+    display: block;
   }
 }
 header nav ul li a:hover {
@@ -93,7 +115,7 @@ header .main-banner {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 90vh;
+  height: 100vh;
 }
 @media (max-width: 767px) {
   header .main-banner {
@@ -182,7 +204,7 @@ main .lessons-banner {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 80vh;
+  height: auto;
 }
 @media (max-width: 767px) {
   main .lessons-banner {
@@ -278,12 +300,69 @@ footer .container {
   align-items: center;
   flex-wrap: wrap;
 }
+@media (max-width: 768px) {
+  footer .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+footer .container form {
+  flex: 0 0 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+footer .container form input[type=text],
+footer .container form input[type=email],
+footer .container form textarea {
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 1px solid #ca961e;
+  background-color: #367c84;
+  font-size: 0.9rem;
+  color: white;
+}
+footer .container form input[type=text]::placeholder,
+footer .container form input[type=email]::placeholder,
+footer .container form textarea::placeholder {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Oxygen", sans-serif;
+}
+footer .container form input[type=text]:focus,
+footer .container form input[type=email]:focus,
+footer .container form textarea:focus {
+  outline: none;
+}
+footer .container form input[type=submit] {
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 15px;
+  color: white;
+  background: #ca961e;
+  border: none;
+}
+footer .container form input[type=submit]:focus {
+  outline: none;
+}
+footer .container form input[type=submit]:hover {
+  border: 2px solid #ca961e;
+  background: #367c84;
+  color: #ca961e;
+}
 footer .container ul {
-  flex: 0 0 35%;
+  flex: 0 0 20%;
 }
 @media (max-width: 767px) {
   footer .container ul {
     flex: 0 0 100%;
+    order: -1;
+    margin-bottom: 15px;
   }
 }
 footer .container ul li {
@@ -309,12 +388,11 @@ footer .container ul .social-media a i:hover {
   transform: scale(1.5, 1.5);
 }
 footer .container iframe {
-  flex: 0 0 55%;
+  flex: 0 0 40%;
 }
 @media (max-width: 767px) {
   footer .container iframe {
-    flex: 0 0 100%;
-    margin-top: 10px;
+    display: none;
   }
 }
 
