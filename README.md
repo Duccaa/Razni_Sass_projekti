@@ -15,4 +15,4 @@ Then you have to compile scss folder with css by running
 
 sass --watch scss:css
 
-Note: you must be in the folder where the scss and css folders are
+Note: when running this command you must be in the folder where the scss and css folders are
