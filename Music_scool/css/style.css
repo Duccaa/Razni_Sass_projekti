@@ -69,7 +69,7 @@ header nav #button {
   outline: none;
   display: none;
 }
-header nav #button .fa-bars {
+header nav #button #toggle {
   color: #ca961e;
   font-size: 30px;
 }
